@@ -11,7 +11,7 @@ pipeline {
             steps {
                 sh 'mvn clean test'
                 sh 'find . -name "*.xml"'
-                junit '**/target/surefire-reports'
+                junit '**/target/surefire-reports/*.xml'
             }
         }
     }
