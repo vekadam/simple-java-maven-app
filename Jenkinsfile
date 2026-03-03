@@ -11,6 +11,7 @@ pipeline {
             }
             steps {
                 sh 'mvn clean test'
+                sh 'find . -name "*.xml"'
             }
             post {
                 always {
