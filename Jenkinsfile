@@ -12,11 +12,7 @@ pipeline {
             steps {
                 sh 'mvn clean test'
                 sh 'find . -name "*.xml"'
-            }
-            post {
-                always {
-                    junit 'target/surefire-reports'
-                }
+                junit 'target/surefire-reports'
             }
         }
     }
